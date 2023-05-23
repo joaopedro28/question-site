@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <style>
+    main {
+      background-color: crimson;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
     .button {
+
       width: 100px;
       height: 30px;
       cursor: pointer;
       margin-bottom: 10px;
+      background-color: aliceblue;
+      color: deeppink;
+      font-weight: 700;
+      text-transform: uppercase;
     }
-    
+    h1 {
+      width: 100%; 
+      font-size: 50px;
+      font-weight: 700;
+      text-align: center;
+      color: aliceblue;
+    }
     .no-button {
       position: absolute;
       top: 0;
@@ -16,22 +36,27 @@
     }
   </style>
 </head>
-<body>
-  <h1>Esta é uma pergunta?</h1>
-  
-  <button class="button">Sim</button>
-  <button class="button no-button">Não</button>
 
+<body>
+  <main>
+
+    <h1>Vai lib?</h1>
+
+    <button class="button">Sim</button>
+    <button class="button no-button">Não</button>
+
+  </main>
   <script>
     const noButton = document.querySelector('.no-button');
-    
-    noButton.addEventListener('mousemove', function() {
+
+    noButton.addEventListener('mousemove', function () {
       const newPositionX = Math.floor(Math.random() * window.innerWidth);
       const newPositionY = Math.floor(Math.random() * window.innerHeight);
-      
+
       noButton.style.left = newPositionX + 'px';
       noButton.style.top = newPositionY + 'px';
     });
   </script>
 </body>
+
 </html>
