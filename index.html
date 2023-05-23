@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .button {
+      width: 100px;
+      height: 30px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    
+    .no-button {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Esta é uma pergunta?</h1>
+  
+  <button class="button">Sim</button>
+  <button class="button no-button">Não</button>
+
+  <script>
+    const noButton = document.querySelector('.no-button');
+    
+    noButton.addEventListener('mousemove', function() {
+      const newPositionX = Math.floor(Math.random() * window.innerWidth);
+      const newPositionY = Math.floor(Math.random() * window.innerHeight);
+      
+      noButton.style.left = newPositionX + 'px';
+      noButton.style.top = newPositionY + 'px';
+    });
+  </script>
+</body>
+</html>
